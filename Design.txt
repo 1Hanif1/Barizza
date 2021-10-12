@@ -1,0 +1,5 @@
+Pizza ordering system
+-- Users can view different pizzas
+-- Users can add pizzas to cart
+-- Users can change the quatity of pizza added
+-- Users can place order.
