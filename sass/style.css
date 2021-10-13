@@ -54,15 +54,25 @@ html {
 
 .header {
   margin: 0 auto;
-  width: 100%;
-  max-width: 192rem;
-  height: 70vh;
-  max-height: 108rem;
-  background-image: url(../img/header.png);
-  background-size: cover;
-  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: 80%;
+  background-image: url(../img/headerbg.png);
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  border-bottom: 0.4rem solid #ff5757;
+}
+
+.header__img {
+  width: 50rem;
+  height: auto;
+  margin: 10rem 0rem;
+  -webkit-filter: drop-shadow(2px 2px 2px orangered);
+          filter: drop-shadow(2px 2px 2px orangered);
 }
 
 /* 
