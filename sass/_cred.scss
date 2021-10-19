@@ -1,0 +1,28 @@
+.cred {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credentials {
+  display: flex;
+  align-items: center;
+
+  &__left {
+    background-image: url(../img/headerbg.png);
+    background-repeat: repeat;
+    background-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30rem;
+      height: auto;
+      margin: 18rem 15rem;
+    }
+  }
+}

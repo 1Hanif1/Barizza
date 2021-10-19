@@ -21,6 +21,11 @@
     cursor: pointer;
     transition: color 200ms ease-in-out;
 
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
     &:hover {
       color: $coralRed;
     }
@@ -44,6 +49,6 @@
     width: 50rem;
     height: auto;
     margin: 10rem 0rem;
-    filter: drop-shadow(2px 2px 2px orangered);
+    filter: drop-shadow(2px 2px 1px orangered);
   }
 }

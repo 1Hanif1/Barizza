@@ -1,0 +1,80 @@
+.pizza {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+
+  &__title {
+    font-size: 3.6rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    &__description {
+      font-size: 1.4rem;
+      color: $grey;
+    }
+  }
+
+  &__items {
+    padding: 4rem 2rem;
+  }
+}
+
+// Pizza Cards
+.pizza {
+  &__item {
+    font-family: 'Poppins', sans-serif;
+    width: 30rem;
+    height: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px $grey;
+    transition: box-shadow 200ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 20px $grey;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    padding: 1rem 2rem;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 0.6em;
+      color: $grey;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.5em;
+  }
+
+  .addToCartBtn {
+    background-color: $white;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border: 0.2rem solid $coralRed;
+
+    &:hover {
+      background-color: $coralRed;
+      color: $white;
+    }
+  }
+}
