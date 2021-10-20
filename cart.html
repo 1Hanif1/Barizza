@@ -8,7 +8,38 @@
     <title>Cart</title>
   </head>
   <body>
-    <?php require("./php/nav.php"); ?>
-    <p>This yo Damn Cart</p>
+    <nav class="nav">
+      <img class="nav__logo" src="./img/logo.png" alt="logo" />
+
+      <ul class="nav__links">
+        <a class="nav__link">Home</a>
+        <a class="nav__link" href="./cart.php">Cart</a>
+        <a class="nav__link" href="./login.html">Log in</a>
+      </ul>
+    </nav>
+
+    <main class="cart__container">
+      <section class="left">
+        <div class="item">
+          <img
+            class="item__img"
+            src="./img/Pizzas/big10/chikenSmokeyJoe.jfif"
+            alt="/"
+          />
+          <div class="item__details">
+            <p class="item__name">Chicken Smokey Joe [BIG 10'']</p>
+            <div class="item__price--container">
+              <span class="item__price">330 </span> RS
+              <div class="item__quantity">
+                <img src="" alt="" class="left--arrow" />
+                <span class="quantity">1</span>
+                <img src="" alt="" class="right--arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="right"></section>
+    </main>
   </body>
 </html>

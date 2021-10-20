@@ -385,4 +385,68 @@ font-family: 'Roboto', sans-serif;
     margin-top: 4rem;
   }
 }
+
+.cart__container {
+  width: 100%;
+}
+
+.cart__container .left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  padding: 5rem;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  -webkit-box-shadow: 0rem 0rem 1.4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 0rem 1.4rem rgba(0, 0, 0, 0.2);
+}
+
+.item__details {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.item__img {
+  width: 20rem;
+  height: auto;
+}
+
+.item__name {
+  font-size: 2.4rem;
+}
+
+.item__price--container {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item__price {
+  margin-right: 0.6rem;
+}
+
+.item__quantity {
+  margin-left: auto;
+}
 /*# sourceMappingURL=style.css.map */
