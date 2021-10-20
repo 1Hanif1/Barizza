@@ -17,6 +17,9 @@
 
   &__items {
     padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
   }
 }
 
@@ -77,4 +80,23 @@
       color: $white;
     }
   }
+}
+
+.popup {
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  border: 2ps solid red;
+  font-family: 'poppins', sans-serif;
+  background-color: $coralRed;
+  padding: 1rem 2rem;
+  border-radius: 1.2rem;
+  color: white;
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

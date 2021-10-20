@@ -1,28 +1,137 @@
-.cred {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+.credentials__body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 2rem;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: radial-gradient(
+    circle,
+    #ff5757,
+    #ff6161,
+    #ff6b6a,
+    #ff7474,
+    #fe7d7d
+  );
 }
-
-.credentials {
+.credentials__container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0rem 0rem 1.8rem hsla(0, 0%, 0%, 0.2);
 
-  &__left {
-    background-image: url(../img/headerbg.png);
-    background-repeat: repeat;
-    background-size: 90%;
+  .left {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20rem 5rem;
+    background-image: url(../img/headerbg.png);
+    background-size: 80%;
 
-    img {
-      width: 30rem;
+    .logo {
+      width: 38rem;
       height: auto;
-      margin: 18rem 15rem;
     }
+  }
+
+  .right {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+
+      .input {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.2rem;
+        width: 30rem;
+        height: 4rem;
+        margin-bottom: 4rem;
+        border: none;
+        border-bottom: 0.3rem solid $white;
+        transition: border 300ms ease-in-out;
+        &:focus {
+          outline: none;
+          border-bottom: 0.3rem solid $coralRed;
+        }
+      }
+    }
+    .loginBtn {
+      background-color: $white;
+      padding: 0.6rem 2rem;
+      border: 0.2rem solid $coralRed;
+      width: fit-content;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.2rem;
+      color: $coralRed;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $coralRed;
+        color: $white;
+      }
+    }
+    .formSwitch button {
+      font-size: 1.4rem;
+      border: none;
+      background: none;
+      color: $coralRed;
+      border-bottom: 0.2rem solid $white;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 0.2rem solid $coralRed;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .credentials__body {
+    overflow: scroll;
+  }
+  .credentials__container {
+    flex-direction: column;
+
+    .left {
+      padding: 3rem 2rem;
+
+      .logo {
+        width: 22rem;
+        height: auto;
+      }
+    }
+
+    .right {
+      padding: 4rem 4rem;
+
+      .login {
+        .input {
+          width: 18rem;
+        }
+      }
+
+      .loginBtn {
+        font-size: 1.4rem;
+        padding: 0.6rem 1rem;
+      }
+    }
+  }
+
+  .formSwitch {
+    margin-top: 4rem;
   }
 }

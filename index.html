@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/style.css" />
+    <script defer src="./script.js"></script>
     <title>Barizza - Delicious Pizzas for you</title>
   </head>
   <body>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      echo "<p>Works</p>";
-}
-    ?>
-    <?php include("./php/nav.php"); ?> 
-    
-    <header class="header">
+    <nav class="nav">
+      <img class="nav__logo" src="./img/logo.png" alt="logo" />
+
+      <ul class="nav__links">
+        <a class="nav__link">Home</a>
+        <a class="nav__link" href="./cart.php">Cart</a>
+        <a class="nav__link" href="./login.html">Log in</a>
+      </ul>
+    </nav>
+    <!-- <header class="header">
       <img class="header__img" src="./img/header.png" alt="header" />
-    </header> 
+    </header>  -->
 
     <main class="pizza">
       <!-- <aside class="pizza__categories"></aside> -->
@@ -40,15 +43,10 @@
                 />
               </div>
               <div class="pizza__description">
-                <h3 class="pizza__name">
-                  Chicken Smokey Joe [BIG 10'']
-                  <span>Smokey BBQ Chicken | Onion | Serves 2-3.</span>
-                </h3>
+                <h3 class="pizza__name">Chicken Smokey Joe [BIG 10'']</h3>
                 <div class="pizza__price">
-                  <span class="price">$390</span>
-                  <form action="./index.php" class="addToCart" method="post">
-                    <input type="submit" value="ADD" class="addToCartBtn" />
-                  </form>
+                  <span class="price">390 Rs</span>
+                  <input type="submit" value="ADD" class="addToCartBtn" />
                 </div>
               </div>
             </section>
@@ -56,5 +54,6 @@
         </h2>
       </section>
     </main>
+    <p class="popup hidden">Added to cart</p>
   </body>
 </html>

@@ -5,21 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/style.css" />
-    <title>Barizza | Sign in</title>
+    <title>Barizza | Login</title>
   </head>
-  <body class="cred">
-    <main class="credentials">
-      <div class="credentials__left">
-        <img src="./img/header.png" alt="/" />
-      </div>
+  <body class="credentials__body">
+    <main class="credentials__container">
+      <section class="left">
+        <img src="./img/logo.png" alt="/" class="logo" />
+      </section>
+      <section class="right">
+        <div class="login">
+          <form action="" class="login">
+            <input
+              class="input"
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="username--login"
+              required
+            />
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password--login"
+              required
+            />
+            <input class="loginBtn" type="submit" value="Log in" />
+          </form>
+        </div>
 
-      <div class="credentials__right">
-        <form action="/" class="log_in">
-          <input type="text" name="username" value="johndoe" />
-          <input type="password" name="password" value="password" />
-          <input type="submit" value="Log in" />
-        </form>
-      </div>
+        <div class="register hidden">
+          <form action="./php/db.php" method="post">
+            <input type="text" name="firstname" id="firstname" />
+            <input type="text" name="lastname" id="lastname" />
+            <input type="text" name="username" id="username--register" />
+            <input type="password" name="password" id="password--register" />
+            <input type="number" name="contact" id="contact" />
+            <textarea
+              name="address"
+              id="address"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+
+        <div class="formSwitch">
+          <button class="registerSwitch">Register?</button>
+          <button class="loginSwitch hidden">Login?</button>
+        </div>
+      </section>
     </main>
   </body>
 </html>
