@@ -1,9 +1,50 @@
 {
   "pizza1": {
+    "container": "NonVeg10",
     "category": "10\" Pizzas | Non Veg",
     "type": "non veg 10",
     "image": "./img/Pizzas/big10/chikenSmokeyJoe.jfif",
     "name": "Chicken Smokey Joe [BIG 10'']",
     "price": "330 RS"
+  },
+  "pizza2": {
+    "container": "NonVeg10",
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/cornChickenDelight.jfif",
+    "name": "Corn Chicken Delight [BIG 10'']",
+    "price": "395 RS"
+  },
+  "pizza3": {
+    "container": "NonVeg10",
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/periPeriChicken.jfif",
+    "name": "Peri Peri Chicken [BIG 10'']",
+    "price": "475 RS"
+  },
+  "pizza4": {
+    "container": "NonVeg10",
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/bbqChicken.jfif",
+    "name": "BBQ Chicken [BIG 10'']",
+    "price": "475 RS"
+  },
+  "pizza5": {
+    "container": "NonVeg10",
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/chickenMexicano.jfif",
+    "name": "Chicken Mexicano [BIG 10'']",
+    "price": "475 RS"
+  },
+  "pizza6": {
+    "container": "NonVeg10",
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/chickenTikka.jfif",
+    "name": "Chicken Tikka [BIG 10'']",
+    "price": "475 RS"
   }
 }
