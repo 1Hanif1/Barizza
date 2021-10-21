@@ -1,10 +1,45 @@
 .cart__container {
+  margin-top: 5rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
   .left {
     display: grid;
     grid-template-columns: auto;
-    padding: 5rem;
+    padding: 0rem 5rem;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid red;
+    border-radius: 1.2rem;
+    padding: 5rem 4rem;
+    box-shadow: 0rem 0rem 1.4rem hsla(0%, 0%, 0%, 0.2);
+    .order--btn {
+      padding: 0.6rem 1.6rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: white;
+      color: $coralRed;
+      border: 0.2rem solid $coralRed;
+      border-radius: 1.2rem;
+
+      &:hover {
+        color: $white;
+        background-color: $coralRed;
+      }
+    }
+
+    .total {
+      font-size: 2rem;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -41,5 +76,52 @@
   }
   &__quantity {
     margin-left: auto;
+    .quantity {
+      font-size: 2.4rem;
+      margin: 0rem 0.5rem;
+    }
+    img {
+      width: 1.4rem;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}
+
+.user__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    height: 4rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    width: 40rem;
+    border: none;
+    transition: border 300ms ease-in-out;
+    border-radius: 1.2rem;
+    box-shadow: 0rem 0rem 1rem hsla(0%, 0%, 0%, 0.2);
+    transition: box-shadow 200ms ease-in-out;
+    &:focus {
+      outline: none;
+      box-shadow: 0rem 0rem 1.8rem hsla(0%, 0%, 0%, 0.2);
+    }
+  }
+  .address {
+    resize: none;
+    height: 10rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-radius: 1.2rem;
+    transition: box-shadow 200ms ease-in-out;
+    box-shadow: 0rem 0rem 1rem hsla(0%, 0%, 0%, 0.2);
+    &:focus {
+      outline: none;
+      box-shadow: 0rem 0rem 1.8rem hsla(0%, 0%, 0%, 0.2);
+    }
   }
 }

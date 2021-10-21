@@ -12,9 +12,8 @@
       <img class="nav__logo" src="./img/logo.png" alt="logo" />
 
       <ul class="nav__links">
-        <a class="nav__link">Home</a>
-        <a class="nav__link" href="./cart.php">Cart</a>
-        <a class="nav__link" href="./login.html">Log in</a>
+        <a class="nav__link" href="./index.html">Home</a>
+        <a class="nav__link" href="./cart.html">Cart</a>
       </ul>
     </nav>
 
@@ -29,17 +28,55 @@
           <div class="item__details">
             <p class="item__name">Chicken Smokey Joe [BIG 10'']</p>
             <div class="item__price--container">
-              <span class="item__price">330 </span> RS
+              <span class="item__price">330 </span>RS
               <div class="item__quantity">
-                <img src="" alt="" class="left--arrow" />
+                <img
+                  src="./img/util/cart-left-arrow.png"
+                  alt=""
+                  class="left--arrow"
+                />
                 <span class="quantity">1</span>
-                <img src="" alt="" class="right--arrow" />
+                <img
+                  src="./img/util/cart-right-arrow.png"
+                  alt=""
+                  class="right--arrow"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="right"></section>
+      <section class="right">
+        <form action="/" class="user__data">
+          <input
+            type="text"
+            class="firstname"
+            placeholder="first name"
+            required
+          />
+          <input
+            type="text"
+            class="lastname"
+            placeholder="last name"
+            required
+          />
+          <input
+            type="tel"
+            name="number"
+            placeholder="contact"
+            class="contact"
+            required
+          />
+          <textarea
+            name="address"
+            class="address"
+            placeholder="Address"
+            required
+          ></textarea>
+        </form>
+        <p class="total">Total: <span class="total--amount">330</span> RS</p>
+        <button class="order--btn">Order</button>
+      </section>
     </main>
   </body>
 </html>

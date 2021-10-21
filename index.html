@@ -13,9 +13,8 @@
       <img class="nav__logo" src="./img/logo.png" alt="logo" />
 
       <ul class="nav__links">
-        <a class="nav__link">Home</a>
+        <a class="nav__link" href="./index.html">Home</a>
         <a class="nav__link" href="./cart.html">Cart</a>
-        <a class="nav__link" href="./login.html">Log in</a>
       </ul>
     </nav>
     <!-- <header class="header">
@@ -26,12 +25,8 @@
       <!-- <aside class="pizza__categories"></aside> -->
 
       <section class="pizza__container" data-category="1">
-        <h2 class="pizza__title">
-          10" Pizzas | Non veg
-          <span class="pizza__title__description"
-            >Go BIG with 10-inch Pizzas! Overload of juicy meat chunks, topped
-            with melting cheese, & baked to perfection.</span
-          >
+        <div data-type="non veg 10">
+          <h2 class="pizza__title">10" Pizzas | Non veg</h2>
 
           <div class="pizza__items">
             <section class="pizza__item">
@@ -48,12 +43,10 @@
                   <span class="price">390 Rs</span>
                   <input type="submit" value="ADD" class="addToCartBtn" />
                 </div>
-
-                <button class="item__delete">Remove</button>
               </div>
             </section>
           </div>
-        </h2>
+        </div>
       </section>
     </main>
     <p class="popup hidden">Added to cart</p>

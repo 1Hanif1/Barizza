@@ -1,0 +1,9 @@
+{
+  "pizza1": {
+    "category": "10\" Pizzas | Non Veg",
+    "type": "non veg 10",
+    "image": "./img/Pizzas/big10/chikenSmokeyJoe.jfif",
+    "name": "Chicken Smokey Joe [BIG 10'']",
+    "price": "330 RS"
+  }
+}
