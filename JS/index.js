@@ -36,8 +36,8 @@ const sendData = function (name, price) {
 };
 
 const getPizzaJSON = function (file) {
-  let request = getHttpRequest('POST', './php/getLocalData.php');
-  request.send(`action=json&file=${file}`);
+  let request = getHttpRequest('POST', './php/db.php');
+  request.send(`action=json`);
   request.addEventListener('load', function () {
     renderPizza(this.responseText);
   });

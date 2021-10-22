@@ -18,7 +18,23 @@ function storeData(){
     }
 }
 
+function getCartData(){
+    try{
+        $connection = new mysqli("localhost","root","","barizza");
+        $sql = "SELECT * FROM `cart`";
+        if($connection->query($sql)->num_rows > 0) {
+            $result = $connection->query($sql);
+            $cartArray = array();
+            while($row =mysqli_fetch_assoc($result))
+            {$emparray[] = $row;}
+            echo json_encode($emparray);
+        }
+    } catch(Exception $e) {echo "Exception".$e;}
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($_POST['action'] == 'store') storeData();   
+    if($_POST['action'] == 'json') echo file_get_contents("../JSON/pizzas.json");
+    if($_POST['action'] == 'cartjson') getCartData();
 }
 ?>

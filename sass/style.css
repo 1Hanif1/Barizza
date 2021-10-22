@@ -454,14 +454,13 @@ font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   border-radius: 1.2rem;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
   -webkit-box-shadow: 0rem 0rem 1.4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0rem 0rem 1.4rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
 }
 
 .item__details {
@@ -476,6 +475,7 @@ font-family: 'Roboto', sans-serif;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 .item__img {
