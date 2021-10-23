@@ -20,6 +20,7 @@ const getHttpRequest = function (method, file) {
   request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   return request;
 };
+
 const sendData = function (name, price) {
   let popup = document.querySelector('.popup');
   let request = getHttpRequest('POST', './php/db.php');

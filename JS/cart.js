@@ -1,6 +1,8 @@
 let pizzaJSON;
+let cartContainer;
 window.addEventListener('load', () => {
   getPizzaJSON();
+  getTotal();
 });
 
 const getHttpRequest = function (method, file) {
@@ -34,7 +36,6 @@ const getCartJson = function (pizzaJSON) {
 
 const renderCart = function (pizzas, cartItem) {
   const cartContainer = document.querySelector('.left');
-  console.log(pizzas, cartItem);
   Object.keys(cartItem).forEach((item) => {
     Object.keys(pizzas).forEach((pizza) => {
       if (pizzas[pizza].name === cartItem[item].name) {
@@ -50,14 +51,14 @@ const renderCart = function (pizzas, cartItem) {
             <div class="item__price--container">
               <span class="item__price">${Number.parseInt(
                 pizzas[pizza].price
-              )}</span>RS
+              )}</span> RS / pc
               <div class="item__quantity">
                 <img
                   src="./img/util/cart-left-arrow.png"
                   alt=""
                   class="left--arrow"
                 />
-                <span class="quantity">1</span>
+                <span class="quantity">${cartItem[item].quantity}</span>
                 <img
                   src="./img/util/cart-right-arrow.png"
                   alt=""
@@ -69,8 +70,34 @@ const renderCart = function (pizzas, cartItem) {
         </div>
           `;
 
-        cartContainer.insertAdjacentHTML('afterbegin', html);
+        cartContainer.insertAdjacentHTML('beforeend', html);
       }
     });
+  });
+
+  cartContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('left--arrow')) {
+      const itemQuantity = e.target.closest('.item__quantity');
+      let quantity = itemQuantity.querySelector('.quantity');
+      if (parseInt(quantity.textContent) >= 1) {
+        quantity.textContent = parseInt(quantity.textContent) - 1;
+      }
+    }
+
+    if (e.target.classList.contains('right--arrow')) {
+      const itemQuantity = e.target.closest('.item__quantity');
+      let quantity = itemQuantity.querySelector('.quantity');
+      quantity.textContent = parseInt(quantity.textContent) + 1;
+    }
+  });
+};
+
+const getTotal = function () {
+  console.log('bruh');
+  let request = getHttpRequest('POST', './php/db.php');
+  request.send('action=getTotal');
+  request.addEventListener('load', function () {
+    const total = document.querySelector('.total--amount');
+    total.textContent = JSON.parse(this.responseText)[0]['SUM(`price`)'];
   });
 };
