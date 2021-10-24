@@ -21,36 +21,37 @@
     <main class="cart__container">
       <section class="left"></section>
       <section class="right">
-        <form action="/" class="user__data">
+        <form class="user__data">
           <input
             type="text"
-            class="firstname"
-            placeholder="first name"
-            required
-          />
-          <input
-            type="text"
-            class="lastname"
-            placeholder="last name"
+            class="firstname order--name"
+            placeholder="Name"
             required
           />
           <input
             type="tel"
             name="number"
-            placeholder="contact"
-            class="contact"
+            placeholder="Contact"
+            class="contact order--contact"
             required
           />
           <textarea
             name="address"
-            class="address"
+            class="address order--address"
             placeholder="Address"
             required
           ></textarea>
+          <p class="total">Total: <span class="total--amount">0</span> RS</p>
+          <button class="order--btn">Order</button>
         </form>
-        <p class="total">Total: <span class="total--amount">0</span> RS</p>
-        <button class="order--btn">Order</button>
       </section>
     </main>
+
+    <div class="modal hidden">
+      <div class="modal__container">
+        <p class="modal__text"></p>
+        <button class="modal__btn">Close</button>
+      </div>
+    </div>
   </body>
 </html>
