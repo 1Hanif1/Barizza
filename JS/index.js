@@ -1,59 +1,59 @@
 let pizzaContainer = document.querySelector('.pizza');
 
 window.addEventListener('load', () => {
-  getPizzaJSON('pizzas.json');
+	getPizzaJSON('pizzas.json');
 });
 
 //////////////////////////////ADD TO CART//////////////////////////////
 
 pizzaContainer.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('addToCartBtn')) return;
-  let pizza = e.target.closest('.pizza__description');
-  let pizzaName = pizza.querySelector('.pizza__name').textContent;
-  let pizzaPrice = Number.parseInt(pizza.querySelector('.price').textContent);
-  sendData(pizzaName, pizzaPrice);
+	if (!e.target.classList.contains('addToCartBtn')) return;
+	let pizza = e.target.closest('.pizza__description');
+	let pizzaName = pizza.querySelector('.pizza__name').textContent;
+	let pizzaPrice = Number.parseInt(pizza.querySelector('.price').textContent);
+	sendData(pizzaName, pizzaPrice);
 });
 
 const getHttpRequest = function (method, file) {
-  let request = new XMLHttpRequest();
-  request.open(`${method}`, `${file}`);
-  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  return request;
+	let request = new XMLHttpRequest();
+	request.open(`${method}`, `${file}`);
+	request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	return request;
 };
 
 const sendData = function (name, price) {
-  let popup = document.querySelector('.popup');
-  let request = getHttpRequest('POST', './php/db.php');
-  request.onreadystatechange = function () {
-    if (this.readyState === 4 || this.status === 200) {
-      popup.classList.remove('hidden');
-      console.log(this.responseText);
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 1000);
-    }
-  };
-  request.send(`action=store&name=${name}&price=${price}`);
+	let popup = document.querySelector('.popup');
+	let request = getHttpRequest('POST', './php/db.php');
+	request.onreadystatechange = function () {
+		if (this.readyState === 4 || this.status === 200) {
+			popup.classList.remove('hidden');
+			console.log(this.responseText);
+			setTimeout(() => {
+				popup.classList.add('hidden');
+			}, 1000);
+		}
+	};
+	request.send(`action=store&name=${name}&price=${price}`);
 };
 
-const getPizzaJSON = function (file) {
-  let request = getHttpRequest('POST', './php/db.php');
-  request.send(`action=json`);
-  request.addEventListener('load', function () {
-    renderPizza(this.responseText);
-  });
+const getPizzaJSON = function () {
+	let request = getHttpRequest('POST', './php/db.php');
+	request.send(`action=json`);
+	request.addEventListener('load', function () {
+		renderPizza(this.responseText);
+	});
 };
 
 //////////////////////////////RENDER PIZZAS//////////////////////////////
 const renderPizza = function (pizzaJSON) {
-  if (!pizzaJSON) return;
-  let pizzas = JSON.parse(pizzaJSON);
-  let pizzaArr = Object.keys(pizzas);
-  pizzaArr.forEach((pizza) => {
-    let container = document.querySelector(`.${pizzas[pizza].container}`);
-    let pizzaContainer = container.querySelector('.pizza__items');
+	if (!pizzaJSON) return;
+	let pizzas = JSON.parse(pizzaJSON);
+	let pizzaArr = Object.keys(pizzas);
+	pizzaArr.forEach((pizza) => {
+		let container = document.querySelector(`.${pizzas[pizza].container}`);
+		let pizzaContainer = container.querySelector('.pizza__items');
 
-    let html = `
+		let html = `
       <section class="pizza__item">
         <div class="pizza__image__container">
           <img
@@ -72,6 +72,6 @@ const renderPizza = function (pizzaJSON) {
       </section>
     `;
 
-    pizzaContainer.insertAdjacentHTML('beforeend', html);
-  });
+		pizzaContainer.insertAdjacentHTML('beforeend', html);
+	});
 };
